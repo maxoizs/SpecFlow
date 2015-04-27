@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using System.Linq;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace testVS2012
@@ -6,22 +8,27 @@ namespace testVS2012
     [Binding]
     public class AuctionFeaturesSteps
     {
+      public AuctionFeaturesSteps (){
+        numbers = new List<int>();
+      }
+      public int result { get; set; }
+      public List<int> numbers { get; set; }
         [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
+        public void GivenIHaveEnteredIntoTheCalculator(int value)
         {
-            ScenarioContext.Current.Pending();
+          numbers.Add( value );
         }
         
         [When(@"I press add")]
         public void WhenIPressAdd()
         {
-            ScenarioContext.Current.Pending();
+          result = numbers.Sum();
         }
         
         [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        public void ThenTheResultShouldBeOnTheScreen(int value)
         {
-           Assert.That(ScenarioContext);
+          Assert.That( result, Is.EqualTo( value ) );
         }
     }
 }

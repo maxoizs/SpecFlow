@@ -6,6 +6,8 @@
 @mytag
 Scenario: Add two numbers
 	Given I have entered 50 into the calculator
-	And I have entered 73 into the calculator
+	And I have entered 70 into the calculator
+  And I have entered 10 into the calculator
+  And I have entered 20 into the calculator
 	When I press add
-	Then the result should be 123 on the screen
+	Then the result should be 150 on the screen
