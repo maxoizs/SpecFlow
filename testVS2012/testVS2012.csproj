@@ -47,20 +47,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuctionFeatures.feature.cs">
+    <Compile Include="OpenAuction.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AuctionFeatures.feature</DependentUpon>
+      <DependentUpon>OpenAuction.feature</DependentUpon>
     </Compile>
-    <Compile Include="AuctionFeaturesSteps.cs" />
+    <Compile Include="BidOnAuction.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BidOnAuction.feature</DependentUpon>
+    </Compile>
+    <Compile Include="BidOnAuctionSteps.cs" />
+    <Compile Include="OpenAuctionSteps.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="AuctionFeatures.feature">
+    <None Include="OpenAuction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>AuctionFeatures.feature.cs</LastGenOutput>
+      <LastGenOutput>OpenAuction.feature.cs</LastGenOutput>
+    </None>
+    <None Include="BidOnAuction.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BidOnAuction.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
