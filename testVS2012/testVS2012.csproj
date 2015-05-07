@@ -47,6 +47,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BiddingNotification.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiddingNotification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="BiddingNotificationSteps.cs" />
     <Compile Include="OpenAuction.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,6 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="BiddingNotification.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BiddingNotification.feature.cs</LastGenOutput>
+    </None>
     <None Include="OpenAuction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>OpenAuction.feature.cs</LastGenOutput>
